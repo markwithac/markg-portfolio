@@ -1,0 +1,26 @@
+extends layout.pug
+
+block content
+  .container
+    form.form
+      h2#tip-header Tip Calculator
+      div#tip-form-content
+        label(for='amount') Bill total
+        br
+        div
+          p#dollar-sign $ 
+          input#amount(type='text' name='amount' placeholder='Bill Amount')
+        br
+        label(for='percent') Tip percentage
+        br
+        div
+          p#percent-sign % 
+          input#percent(type='text' name='percent' placeholder='Tip Percent')
+        br
+      button#btn(type='button') Calculate
+      div#total
+        h2#total-header Tip Amount
+        p#total-body
+
+  script(src='/js/tip-calculator.js' async='' defer='')
+      
