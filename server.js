@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT || 5000  // for herkou port
 const programRouter = require('./routes/program.js')
 
 app.set('view engine', 'pug')
