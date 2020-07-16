@@ -4,23 +4,29 @@ block content
   .container
     .project-item
       .primary
-        h2.article.article-header Title
+        h2.article.article-header Clock App
         p.article.article-body
           | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores quaerat aut quos commodi nobis possimus autem veritatis, blanditiis nisi! Fugit sapiente, magnam nulla error aliquid natus! Ipsa a accusamus porro!
       .secondary
         img(src='/img/clock-2.jpg' alt='img')
+      form#index-form(action='/app/clock' method='GET')
+        button.index-btn(type='submit') VIEW APP
     .project-item
       .primary
-        h2.article.article-header Title
+        h2.article.article-header Tip Calculator
         p.article.article-body
           | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores quaerat aut quos commodi nobis possimus autem veritatis, blanditiis nisi! Fugit sapiente, magnam nulla error aliquid natus! Ipsa a accusamus porro!
       .secondary
-        img(src='img/clock-2.jpg' alt='img')
-    .project-item
-      .primary
-        h2.article.article-header Title
-        p.article.article-body
-          | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores quaerat aut quos commodi nobis possimus autem veritatis, blanditiis nisi! Fugit sapiente, magnam nulla error aliquid natus! Ipsa a accusamus porro!
-      .secondary
-        img(src='public/clock-2.jpg' alt='img')
+        img(src='img/calculator-1.jpg' alt='img')
+      form#index-form(action='/app/tip-calculator' method='GET')
+        button.index-btn(type='submit') VIEW APP
+    //- .project-item
+    //-   .primary
+    //-     h2.article.article-header Title
+    //-     p.article.article-body
+    //-       | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores quaerat aut quos commodi nobis possimus autem veritatis, blanditiis nisi! Fugit sapiente, magnam nulla error aliquid natus! Ipsa a accusamus porro!
+    //-   .secondary
+    //-     img(src='public/clock-2.jpg' alt='img')
+    //-   form#index-form(action='/app/clock' method='GET')
+    //-     button.index-btn(type='submit') VIEW APP
 
