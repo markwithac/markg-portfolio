@@ -2,17 +2,26 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background: darkcyan;
 }
 
 header {
   display: flex;
   position: fixed;
   width: 100%;
-  max-height: 70px;
+  height: 60px;
   flex-direction: row;
   justify-content: space-between;
-  background: darkcyan;
+  align-items: center;
+  background: white;
   padding: 0px 25px 0px 25px;
+}
+
+#logo{
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 2rem;
+  color: darkcyan;
 }
 
 ul {
@@ -23,7 +32,10 @@ ul {
 }
 
 li {
-  margin-left: 15px;
+  margin-left: 25px;
+  color: darkcyan;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .container {
@@ -41,11 +53,8 @@ li {
   flex: 1 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 25px;
 }
-
-/* .article {
-  align-content: center;
-} */
 
 .article-header {
   text-align: center;
@@ -66,8 +75,8 @@ li {
 }
 
 .secondary img {
-  max-width: 100%;
-  max-height: 300px;
+  max-width: 600px;
+
 }
 
 .index-btn {
