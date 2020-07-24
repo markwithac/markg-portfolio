@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content
+  #weather
+    form#input.container.weather-container
+      input#weather-search(type='text' placeholder='e.g. Toronto, CA')
+      input#weather-search-btn(type='submit' value='Search')
+    .container.location.weather-container
+      h1#location 
+      p#icon 
+    .container.temperature.weather-container
+        h2#temp.temp 
+        #desc 
+
+  script(src='/js/weather.js' async='' defer='')
+      

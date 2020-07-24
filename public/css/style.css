@@ -28,7 +28,7 @@ li {
 
 .container {
   padding-top: 70px;
-  max-width: 70%;
+  width: 70%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
