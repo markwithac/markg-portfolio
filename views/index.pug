@@ -7,7 +7,10 @@ block content
       .primary
         h2.article.article-header Weather APP
         p.article.article-body
-          | Find out the weather of your current location or any other city!
+          | Find out the weather of your current location or any other city! 
+          br 
+          | &gt; Uses the openweathermap.org API &amp; fetch()
+          
       .secondary
         img(src='img/weather-1.jpg' alt='img')
       form#index-form(action='/app/weather' method='GET')

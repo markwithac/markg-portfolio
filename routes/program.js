@@ -15,4 +15,8 @@ router.get('/weather', (req, res) => {
   res.render('weather')
 })
 
+router.get('/tictactoe', (req, res) => {
+  res.render('tictactoe')
+})
+
 module.exports = router;
