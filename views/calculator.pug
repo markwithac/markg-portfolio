@@ -1,0 +1,13 @@
+extends layout.pug
+
+block content
+  div#weather-container
+    div#location
+      h1#location Timezone
+      p#icon
+    div#temp
+      h2#temp-degree 34
+      div#temp-dsec It's cold
+
+  script(src='/js/tip-calculator.js' async='' defer='')
+      
