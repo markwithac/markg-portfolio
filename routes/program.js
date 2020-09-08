@@ -36,9 +36,21 @@ router.get('/library',  async (req, res) => {
 })
 
 router.post('/library/add', async (req, res) => {
-    await Library.create({
-        title: req.body.title
+    if (req.body.title) {
+      if (req.body.author == '') {
+        req.body.author = null;
+      }  
+      if (req.body.year == '') {
+        req.body.year = null;
+      }
+      await Library.create({
+        title: req.body.title,
+        author: req.body.author,
+        year: req.body.year
       });
+    } else {
+      res.send({ error: 'what the f***' })
+    }
       console.log(req.body.title)
   res.redirect('/app/library')
 })
@@ -48,5 +60,9 @@ router.post('/library/remove/:id', async (req, res) => {
   await book.destroy()
   res.redirect('/app/library')
 })
+
+// router.post('/library/edit', async(req, res) => {
+
+// })
 
 module.exports = router;

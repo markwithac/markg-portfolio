@@ -18,9 +18,9 @@ app.get('/', (req, res) => {
 (async () => {
   await db.sequelize.sync({ force: true });
   try {
-    await Library.create({ title: 'The Name of the Wind' });
-    await Library.create({ title: "The Wise Man's Fear" });
-    await Library.create({ title: "The Doors of Stone" });
+    await Library.create({ title: 'The Name of the Wind', author: 'Patrick Rothfuss', year: 2007 });
+    await Library.create({ title: "The Wise Man's Fear", author: 'Patrick Rothfuss', year: 2011 });
+    await Library.create({ title: "The Doors of Stone", author: 'Patrick Rothfuss' });
   } catch (error) {
     console.error('Error connecting to the database: ', error);
   }

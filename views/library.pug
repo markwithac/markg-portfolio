@@ -5,20 +5,33 @@ block content
     .app-header Mark's Library
     
     form#library-input(action="/app/library/add" method='post')
-      input(type='text' placeholder='Title' name='title')
-      button(type='submit') Add
+      input.library_add(type='text' placeholder='Title' name='title' required)
+      input.library_add(type='text' placeholder='Author' name='author')
+      input.library_add(type='text' placeholder='Year Published' name='year')
+      button#library_add_btn(type='submit') Add
     
-    table#library-table
-      tr
-        th Book ID
-        th Title
-      each book in books
-        tr
-          td.bookId= book.dataValues.id
-          td.bookTitle= book.dataValues.title
-          td
-            form(action=`/app/library/remove/${book.dataValues.id}` method='post')
-              button(type='submit' name=`${book.dataValues.id}`) X
-            form(action=`/app/library/edit/${book.dataValues.id}` method='post')
-              button(type='submit' name=`${book.dataValues.id}`) /
+    table#library_table
+      thead
+        tr#table_header
+          th#th_id ID
+          th#th_title Title
+          th#th_author Author
+          th#th_date Year
+          th#th_edit Edit
+          th#th_delete Del
+      tbody
+        each book in books
+          tr#table_row
+            td.bookIde(contenteditable=true)= book.dataValues.id
+            td.bookTitle= book.dataValues.title
+            td.bookAuthor= book.dataValues.author
+            td.bookPublished= book.dataValues.year
+            td.bookEdit  
+              form(action=`/app/library/edit/${book.dataValues.id}` method='post')
+                button(type='submit' name=`${book.dataValues.id}`) /
+            td.bookDelete
+              form(action=`/app/library/remove/${book.dataValues.id}` method='post')
+                button(type='submit' name=`${book.dataValues.id}`) X
+                
+  script(src='../public/js/library.js' async='' defer='')
 
