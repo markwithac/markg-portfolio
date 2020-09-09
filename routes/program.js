@@ -2,11 +2,10 @@ const express = require('express')
 const router = express.Router()
 const bodyParser = require('body-parser')
 const db = require('../db');
-
 const { Library } = db.models;
 
 router.use( bodyParser.json() );       // to support JSON-encoded bodies
-router.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+router.use( bodyParser.urlencoded({    // to support URL-encoded bodies
   extended: true
 }));
 
@@ -61,8 +60,8 @@ router.post('/library/remove/:id', async (req, res) => {
   res.redirect('/app/library')
 })
 
-// router.post('/library/edit', async(req, res) => {
+router.post('/library/edit', async(req, res) => {
 
-// })
+})
 
 module.exports = router;
